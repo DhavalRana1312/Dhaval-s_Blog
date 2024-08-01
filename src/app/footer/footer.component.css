@@ -1,0 +1,28 @@
+.footer {
+    text-align: center;
+    padding: -3px;
+    background-color: #000000;
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    bottom: -9px;
+}
+p{
+    margin-top: 5px;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+/* Responsive Styles */
+@media (max-width: 600px) {
+    .footer {
+        padding: 15px; /* Slightly larger padding for smaller screens */
+        font-size: 14px; /* Adjust font size for better readability */
+        bottom: 0; /* Ensure it's fixed at the bottom */
+    }
+
+    .footer p {
+        margin-top: 10px;
+        margin-bottom: 1rem;
+        font-size: 12px; /* Adjust font size for better readability */
+    }
+}

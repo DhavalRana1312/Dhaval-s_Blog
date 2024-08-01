@@ -1,0 +1,158 @@
+/* styles.css */
+
+
+
+
+.contact-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap; /* Ensure responsiveness */
+}
+
+.contact-image {
+    flex: 1;
+    transition: transform 0.5s ease;
+    perspective: 1000px; /* For 3D effect */
+}
+
+.contact-image img {
+    width: 85%;
+    height: auto;
+    border-radius: 209px;
+    box-shadow: 0 17px 30px rgba(6, 0, 0, 1.3);
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    transform: rotateY(0deg);
+    margin-left: 23px;
+
+}
+
+.contact-image:hover img {
+    transform: rotateY(9deg);
+    opacity: 21.8;
+}
+
+.contact-form {
+    flex: 1;
+    background: linear-gradient(135deg, #ffffff, #a5a5a5);
+    padding: 37px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 1.2);
+    animation: _ngcontent-ng-c881887395_fadeIn 1s ease;
+    transition: transform 0.3s ease;
+    height: 541px;
+    margin: 92px;
+}
+
+.contact-form:hover {
+    transform: scale(1.03); /* Slight zoom effect on hover */
+}
+
+.contact-form h2 {
+    margin-top: 0;
+    color: #333;
+    font-size: 27px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.form-group {
+    margin-bottom: 5px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #666;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 98%;
+    padding: 8px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    background: #fafafa;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #ff4081;
+    background-color: #fff;
+    box-shadow: 0 0 8px rgba(255,64,129,0.3);
+    outline: none;
+}
+
+button {
+    background: linear-gradient(135deg, #32c9ff, #00a4b2);
+    color: #fff;
+    border: none;
+    padding: 4px 25px;
+    border-radius: 11px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 5px 15px rgba(255, 64, 129, 0.3);
+    margin: 7px;
+    margin-left: 91px;
+    font-weight: 500;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #ff6f61, #ff4081);
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(255,64,129,0.4);
+}
+
+/* Keyframes for fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@media (max-width: 600px) {
+    .contact-wrapper {
+        flex-direction: column;
+    
+    }
+    .contact-image{
+        width: 183px;
+        margin-top: 148px;
+    }
+
+    .contact-image img {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .contact-form {
+        padding: 20px;
+        margin: 77px 0;
+        height: auto;
+    }
+
+    .contact-form h2 {
+        font-size: 22px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        width: 100%;
+    }
+
+    button {
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
